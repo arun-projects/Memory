@@ -54,26 +54,28 @@ function resetArray() {
 }
 
 function checkWin() {
-	if (pickedAnimals[0].animal === pickedAnimals[1].animal) {
-		//Write the beginning of a FOR loop from 0 to 1
-			document
-				.getElementById(pickedAnimals[i].id)
-				.classList
-				.add("success");
-		}		
+	if (pickedAnimals.length === 2) {
+		if (pickedAnimals[0].animal === pickedAnimals[1].animal) {
+			//Write the beginning of a FOR loop from 0 to 1
+				document
+					.getElementById(pickedAnimals[i].id)
+					.classList
+					.add("success");
+			}		
 
-		//Call the function "resetArray" here
-	} else {
-		//Write an alert here to indicate to the user that the animals they selected didn't match
+			//Call the function "resetArray" here
+		} else {
+			//Write an alert here to indicate to the user that the animals they selected didn't match
 
-		//Write the beginning of a FOR loop from 0 to 1
-			document
-				.getElementById(pickedAnimals[i].id)
-				.childNodes[0]
-				.classList
-				.add("animal");
+			//Write the beginning of a FOR loop from 0 to 1
+				document
+					.getElementById(pickedAnimals[i].id)
+					.childNodes[0]
+					.classList
+					.add("animal");
+			}
+
+			//Call the function "resetArray"
 		}
-
-		//Call the function "resetArray"
 	}
 }

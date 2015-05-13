@@ -54,26 +54,28 @@ function resetArray() {
 }
 
 function checkWin() {
-	if (pickedAnimals[0].animal === pickedAnimals[1].animal) {
-		for (var i = 0; i < 2; i++) {
-			document
-				.getElementById(pickedAnimals[i].id)
-				.classList
-				.add("success");
-		}		
+	if (pickedAnimals.length === 2) {
+		if (pickedAnimals[0].animal === pickedAnimals[1].animal) {
+			for (var i = 0; i < 2; i++) {
+				document
+					.getElementById(pickedAnimals[i].id)
+					.classList
+					.add("success");
+			}		
 
-		resetArray();
-	} else {
-		alert("Sorry... No match!");
+			resetArray();
+		} else {
+			alert("Sorry... No match!");
 
-		for (var i = 0; i < 2; i++) {
-			document
-				.getElementById(pickedAnimals[i].id)
-				.childNodes[0]
-				.classList
-				.add("animal");
+			for (var i = 0; i < 2; i++) {
+				document
+					.getElementById(pickedAnimals[i].id)
+					.childNodes[0]
+					.classList
+					.add("animal");
+			}
+
+			resetArray();
 		}
-
-		resetArray();
 	}
 }
