@@ -8,7 +8,7 @@ function shuffleArray(array) {
 		array[j] = temp;
 	}
 	
-	//Return the variable "array"
+	return array;
 }
 
 //Call the function "shuffleArray" passing in "animals" as the parameter
